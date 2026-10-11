@@ -1,0 +1,25 @@
+<!--- { "title": "About", "description": "About Red-Shell Martell, and how to get in touch." } --->
+<header class="page-intro">
+  <h1>About</h1>
+</header>
+
+<section class="section">
+  <div class="about wide">
+    <!-- BIO: photo and bio copied from the Wix Bio page -->
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <p>Questions, commissions or just saying hi: send a message here or email <a href="mailto:{{email}}">{{email}}</a>.</p>
+  <form class="form" action="https://api.web3forms.com/submit" method="POST" data-email="{{email}}">
+    <input type="hidden" name="access_key" value="{{formKey}}">
+    <input type="hidden" name="subject" value="New message from redshellmartell.com">
+    <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off">
+    <label>Name <input type="text" name="name" required autocomplete="name"></label>
+    <label>Email <input type="email" name="email" required autocomplete="email"></label>
+    <label>Message <textarea name="message" required></textarea></label>
+    <div><button class="button" type="submit">Send</button></div>
+    <p class="form-status" role="status"></p>
+  </form>
+</section>
