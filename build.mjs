@@ -54,6 +54,7 @@ function render(urlPath, meta, body) {
     social: socials(),
     year: String(new Date().getFullYear()),
     canonical: config.url.replace(/\/$/, "") + urlPath,
+    mainClass: meta.mainClass || "",
   };
   const content = body.replaceAll("{{formKey}}", config.formKey).replaceAll("{{email}}", config.email);
   let html = layout.replace("{{content}}", () => content);

@@ -1,0 +1,10 @@
+# Old Wix addresses -> new pages (Cloudflare Pages format)
+/playingcards          /playing-cards/          301
+/selected-work         /artwork/                301
+/slicethewatermelon    /slice-the-watermelon/   301
+/bio                   /about/                  301
+/contact               /about/#contact          301
+/shop                  https://www.etsy.com/shop/RedShellMartell  301
+/post/:slug            /blog/:slug/             301
+/blog/categories/*     /blog/                   301
+/blog/page/*           /blog/                   301

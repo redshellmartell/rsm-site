@@ -2,20 +2,51 @@
   "name": "Red-Shell Martell",
   "tagline": "Art, Design, Production. A fresh take on paintings, playing cards, and custom shoes!",
   "url": "https://www.redshellmartell.com",
-  "email": "TODO@example.com",
+  "email": "contact@redshellmartell.com",
   "formKey": "YOUR_WEB3FORMS_ACCESS_KEY",
   "nav": [
-    { "label": "Artwork", "href": "/artwork/" },
-    { "label": "Playing Cards", "href": "/playing-cards/" },
-    { "label": "Slice the Watermelon", "href": "/slice-the-watermelon/" },
-    { "label": "Blog", "href": "/blog/" },
-    { "label": "About", "href": "/about/" },
-    { "label": "Etsy", "href": "https://www.etsy.com/", "external": true }
+    {
+      "label": "Artwork",
+      "href": "/artwork/"
+    },
+    {
+      "label": "Playing Cards",
+      "href": "/playing-cards/"
+    },
+    {
+      "label": "Slice the Watermelon",
+      "href": "/slice-the-watermelon/"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog/"
+    },
+    {
+      "label": "About",
+      "href": "/about/"
+    },
+    {
+      "label": "Etsy",
+      "href": "https://www.etsy.com/shop/RedShellMartell",
+      "external": true
+    }
   ],
   "social": [
-    { "label": "Instagram", "href": "https://www.instagram.com/" },
-    { "label": "Facebook", "href": "https://www.facebook.com/" },
-    { "label": "Twitter", "href": "https://twitter.com/" },
-    { "label": "YouTube", "href": "https://www.youtube.com/" }
+    {
+      "label": "Instagram",
+      "href": "https://www.instagram.com/redshellmartell"
+    },
+    {
+      "label": "Facebook",
+      "href": "https://www.facebook.com/redshellmartell"
+    },
+    {
+      "label": "Pinterest",
+      "href": "https://www.pinterest.com/redshellmartell"
+    },
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/matthew-austin-5a9b8a21/"
+    }
   ]
 }
