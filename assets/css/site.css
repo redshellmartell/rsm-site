@@ -1,6 +1,7 @@
 /* Red-Shell Martell
-   Layout concept: a dark studio wall. Artwork is pinned up big and slightly
-   askew like a tattoo flash sheet; type is loud poster lettering with
+   Layout concept: a dark studio wall. On the home page artwork is pinned up
+   big and slightly askew like a tattoo flash sheet; the gallery pages hang it
+   straight with proper captions. Type is loud poster lettering with
    hand-marker labels. Text columns stay at a comfortable reading width. */
 
 :root {
@@ -17,7 +18,7 @@
 
   --font-display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
   --font-hand: "Permanent Marker", "Comic Sans MS", cursive;
-  --font-body: "Barlow", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
   --measure: 680px;
   --wide: 1240px;
@@ -194,30 +195,34 @@ main.flush { padding-bottom: 0; }
 
 /* ---------- Home ---------- */
 
-.hero { position: relative; overflow: hidden; border-bottom: 6px solid var(--red); }
-.hero-image {
-  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
-  filter: grayscale(0.2) brightness(0.32) contrast(1.1);
-  transform: scale(1.05);
-}
+.hero { position: relative; overflow: hidden; border-bottom: 6px solid var(--red);
+  background: radial-gradient(ellipse at 30% 40%, #2a1c22 0%, var(--ink) 65%); }
 .hero-inner {
   position: relative; max-width: var(--wide); margin: 0 auto;
-  padding: clamp(80px, 14vw, 180px) var(--gutter) clamp(64px, 10vw, 128px);
+  padding: clamp(40px, 7vw, 96px) var(--gutter) clamp(64px, 8vw, 112px);
+  display: grid; gap: var(--s4); align-items: center;
 }
-.hero h1 { font-size: clamp(4rem, 15vw, 12rem); line-height: 0.82; margin-bottom: var(--s3); }
+@media (min-width: 860px) { .hero-inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); } }
+.hero-art { position: relative; transform: rotate(-2deg); max-width: 560px; justify-self: center; width: 100%; }
+.hero-art:hover { transform: rotate(-1deg) scale(1.01); }
+@media (min-width: 860px) { .hero-art { order: 2; } }
+.hero-art img:first-child { border-width: 10px; box-shadow: 0 30px 70px rgb(0 0 0 / 0.65); }
+.hero-text { min-width: 0; }
+.hero h1 { font-size: clamp(3.25rem, 8.5vw, 7.5rem); line-height: 0.84; margin-bottom: var(--s3); }
 .hero h1 span { display: block; }
 .hero h1 .red { color: var(--red); }
 .hero h1 .outline { color: transparent; -webkit-text-stroke: 2px var(--paper); }
 .hero-tagline {
-  font-family: var(--font-hand); font-size: clamp(1.25rem, 2.6vw, 1.75rem); line-height: 1.35;
-  color: var(--gold); max-width: 30ch; transform: rotate(-1.5deg);
+  font-family: var(--font-hand); font-size: clamp(1.25rem, 2.2vw, 1.625rem); line-height: 1.35;
+  color: var(--gold); max-width: 28ch; transform: rotate(-1.5deg);
 }
-.hero-badge {
-  position: absolute; right: var(--gutter); bottom: clamp(48px, 8vw, 96px);
-  width: clamp(110px, 16vw, 200px); height: auto;
+.hero .actions { margin-top: var(--s3); }
+.hero-art .hero-badge {
+  position: absolute; right: -28px; top: -32px; width: clamp(84px, 11vw, 132px); height: auto;
+  border: 0 !important; box-shadow: none !important; background: none !important;
   animation: spin 40s linear infinite;
 }
-@media (max-width: 640px) { .hero-badge { opacity: 0.35; top: var(--s3); bottom: auto; } }
+@media (max-width: 640px) { .hero-art .hero-badge { right: -8px; top: -24px; } }
 @keyframes spin { to { transform: rotate(360deg); } }
 
 /* Scrolling ticker of what the studio makes */
@@ -290,21 +295,40 @@ main.flush { padding-bottom: 0; }
 }
 .gallery-4 { grid-template-columns: repeat(4, 1fr); }
 @media (max-width: 760px) { .gallery-4 { grid-template-columns: repeat(2, 1fr); } }
-.gallery img, .masonry img { width: 100%; cursor: zoom-in; background: var(--ink-3); transition: transform 0.25s, filter 0.25s; }
+.gallery img { width: 100%; cursor: zoom-in; background: var(--ink-3); transition: transform 0.25s, filter 0.25s; }
 .gallery img { aspect-ratio: 1; object-fit: cover; }
 .gallery img:hover { transform: scale(1.03); filter: brightness(1.1); }
-.gallery figure, .masonry figure { margin: 0; }
+.gallery figure { margin: 0; }
 
-.masonry { columns: 3 300px; column-gap: var(--s3); margin-block: var(--s3); }
-.masonry figure { break-inside: avoid; margin-bottom: var(--s4); transition: transform 0.25s; }
-.masonry figure:nth-child(3n+1) { transform: rotate(-1.2deg); }
-.masonry figure:nth-child(3n+2) { transform: rotate(0.8deg); }
-.masonry figure:nth-child(3n) { transform: rotate(-0.4deg); }
-.masonry figure:hover { transform: rotate(0) scale(1.02); }
-.masonry img { border: 6px solid var(--paper); box-shadow: 0 16px 36px rgb(0 0 0 / 0.5); }
-.masonry figcaption { margin-top: 12px; font-family: var(--font-hand); font-size: 1.125rem; transform: rotate(-1.5deg); }
-.masonry figcaption a { color: var(--gold); text-decoration: none; }
-.masonry figcaption a:hover { color: var(--red); }
+/* Artwork page: hung straight, captioned like a gallery label */
+.art-group {
+  max-width: var(--wide); margin: 0 auto; padding: var(--s4) var(--gutter) 0;
+  scroll-margin-top: 80px;
+}
+.art-group > .lede { margin-top: calc(-1 * var(--s2)); margin-bottom: var(--s4); }
+.art-group h2::after { content: ""; display: block; width: 72px; height: 6px; background: var(--red); margin-top: 14px; }
+.art-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: var(--s4) var(--s4); align-items: start; }
+.art-grid figure { margin: 0; min-width: 0; }
+.art-grid img { width: 100%; cursor: zoom-in; border: 6px solid var(--paper); background: var(--ink-3);
+  box-shadow: 0 16px 36px rgb(0 0 0 / 0.45); transition: transform 0.25s; }
+.art-grid img:hover { transform: translateY(-4px); }
+.art-grid figcaption { margin-top: 14px; display: grid; gap: 4px; }
+.art-title { font-family: var(--font-display); font-weight: 900; font-size: 1.5rem; line-height: 1.05;
+  text-transform: uppercase; color: var(--paper); text-decoration: none; }
+a.art-title:hover { color: var(--red); }
+.art-meta { font-size: 0.9375rem; line-height: 1.45; color: var(--paper-dim); }
+
+/* Filter buttons (artwork page and blog); shown by site.js */
+.filters { display: flex; flex-wrap: wrap; gap: var(--s1) 12px; margin-bottom: var(--s3); }
+.filters button {
+  font: inherit; font-weight: 600; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.08em;
+  background: none; color: var(--paper); border: 2px solid var(--ink-3); padding: 8px 16px; cursor: pointer;
+}
+.filters button:hover { border-color: var(--paper); }
+.filters button[aria-pressed="true"] { background: var(--red); border-color: var(--red); color: var(--ink); }
+.filters[hidden] { display: none; }
+.art-filters { max-width: var(--wide); margin: 0 auto; padding-inline: var(--gutter); }
+
 .prose figcaption, .gallery figcaption { font-size: 0.875rem; color: var(--paper-dim); margin-top: var(--s1); }
 
 /* Lightbox */
@@ -324,10 +348,18 @@ main.flush { padding-bottom: 0; }
 
 /* ---------- Project pages ---------- */
 
-.title-band { background: var(--ink-2); padding: var(--s4) var(--gutter); border-top: 6px solid var(--red); }
-.title-band img { margin: 0 auto; max-height: 220px; width: auto; }
-.section > .title-band { margin-bottom: var(--s4); }
-.title-band.light { background: var(--paper); }
+/* Deck and game logos laid over a photo of the real thing */
+.logo-hero {
+  position: relative; overflow: hidden; display: grid; place-items: center;
+  min-height: clamp(260px, 42vw, 520px); margin-bottom: var(--s4);
+  border-top: 6px solid var(--red); background: var(--ink-2);
+}
+.logo-hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.42) saturate(1.1); }
+.logo-hero h1, .logo-hero h2 { position: relative; margin: 0; padding: var(--s4) var(--gutter); width: 100%; }
+.section .logo-hero h2::after { display: none; }
+.logo-hero h1 img, .logo-hero h2 img { margin: 0 auto; width: min(640px, 86%); filter: drop-shadow(0 4px 18px rgb(0 0 0 / 0.6)); }
+.logo-hero-top + .page-intro { padding-top: var(--s4); }
+.logo-hero-top { margin-bottom: 0; border-top: 0; border-bottom: 6px solid var(--red); min-height: clamp(320px, 50vw, 600px); }
 
 .deck { display: grid; gap: var(--s3); align-items: center; margin-bottom: var(--s3); }
 @media (min-width: 860px) { .deck { grid-template-columns: 1fr 1fr; gap: var(--s4); } }
@@ -346,7 +378,10 @@ main.flush { padding-bottom: 0; }
 .post-card a { color: var(--paper); text-decoration: none; display: block; }
 .post-card img { aspect-ratio: 3 / 2; object-fit: cover; width: 100%; margin-bottom: var(--s2); background: var(--ink-3); transition: transform 0.3s; }
 .post-card a:hover img { transform: rotate(-1deg) scale(1.02); }
-.post-card h2 { font-size: 1.875rem; margin-bottom: var(--s1); }
+.post-card h2 { font-size: 1.875rem; margin-bottom: 0; }
+.post-card .post-meta { margin-bottom: 6px; }
+.post-card .series { color: var(--gold); }
+.post-card[hidden] { display: none; }
 .post-card h2::after { display: none; }
 .post-card a:hover h2 { color: var(--red); }
 .post-card p { color: var(--paper-dim); font-size: 0.9375rem; margin-bottom: var(--s1); }

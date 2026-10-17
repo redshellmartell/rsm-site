@@ -1,63 +1,124 @@
-<!--- { "title": "Artwork", "description": "Paintings, hand-painted shoes and painted skulls by Red-Shell Martell." } --->
+<!--- { "title": "Artwork", "description": "Paintings, hand-painted shoes, murals and painted skulls by Red-Shell Martell.", "mainClass": "art-page" } --->
 <header class="page-intro">
   <h1>Artwork</h1>
-  <p class="lede">Paintings, hand-painted shoes and the odd painted skull. Tap any piece to see it larger. Pieces with a title link to the story behind them on the blog.</p>
+  <p class="lede">Paintings, hand-painted shoes, murals and the odd painted skull. Tap any piece to see it larger, or its title for the story behind it.</p>
 </header>
 
-<section class="section">
-  <div class="masonry wide">
+<div class="filters art-filters" role="group" aria-label="Show" hidden>
+  <button type="button" aria-pressed="true" data-filter="all">All</button>
+  <button type="button" aria-pressed="false" data-filter="paintings">Paintings</button>
+  <button type="button" aria-pressed="false" data-filter="shoes">Shoes</button>
+  <button type="button" aria-pressed="false" data-filter="murals-objects">Murals and objects</button>
+</div>
+
+<section class="art-group" id="paintings" data-category="paintings">
+  <h2>Paintings</h2>
+  <p class="lede">Acrylic on wood panel, mostly painted in Tallinn, Estonia.</p>
+  <div class="art-grid">
     <figure>
-      <img src="/assets/img/artwork/eb4831538f99472eb50fb2522ff92a97.webp" width="960" height="869" alt="Paintings displayed at an outdoor market stall in Estonia" loading="lazy">
-      <figcaption><a href="/blog/the-estonian-collection/">The Estonian Collection</a></figcaption>
+      <img src="/assets/img/artwork/e49a04c0ca064634846d5dd4882f829a.webp" width="1322" height="1600" sizes="(max-width: 700px) 100vw, 400px" alt="Painting of two jellyfish, one blue and one orange, drifting through a sky that fades into space" loading="lazy">
+      <figcaption><a class="art-title" href="/blog/space-jellyfish/">Space Jellyfish</a><span class="art-meta">Acrylic&nbsp;on&nbsp;wood&nbsp;panel · 50&nbsp;×&nbsp;60&nbsp;cm&nbsp;(19.5&nbsp;×&nbsp;23.5&nbsp;in) · 2018</span></figcaption>
     </figure>
     <figure>
-      <img src="/assets/img/artwork/15348fce776749e99312bb7487a78d4d.webp" width="982" height="828" alt="Hand-painted grey high-top sneakers with a skull and potion design" loading="lazy">
-      <figcaption><a href="/blog/tattooed-shoes-flytraps/">Tattooed Shoes: FlyTraps</a></figcaption>
+      <img src="/assets/img/artwork/53ba03311ff04bb4a99dd787ee59cb0f.webp" width="1340" height="1600" sizes="(max-width: 700px) 100vw, 400px" alt="Painting of a giant wave with pink octopus tentacles rising from the sea" loading="lazy">
+      <figcaption><a class="art-title" href="/blog/octoportrait-from-the-depths/">Octoportrait, from the Depths</a><span class="art-meta">Acrylic&nbsp;on&nbsp;wood&nbsp;panel · 50&nbsp;×&nbsp;60&nbsp;cm&nbsp;(19.5&nbsp;×&nbsp;23.5&nbsp;in) · 2020</span></figcaption>
     </figure>
     <figure>
-      <img src="/assets/img/artwork/53ba03311ff04bb4a99dd787ee59cb0f.webp" width="1340" height="1600" alt="Painting of a giant wave with pink octopus tentacles rising from the sea" loading="lazy">
-      <figcaption><a href="/blog/octoportrait-from-the-depths/">Octoportrait, from the Depths</a></figcaption>
+      <img src="/assets/img/blog/moonrise-over-a-stormy-baltic/e9b838e85cca42cdaa1230b2bb6ac81e.webp" width="1600" height="1280" sizes="(max-width: 700px) 100vw, 400px" alt="Painting of a glowing yellow-green moon rising behind a curling purple wave" loading="lazy">
+      <figcaption><a class="art-title" href="/blog/moonrise-over-a-stormy-baltic/">Moonrise Over a Stormy Baltic</a><span class="art-meta">Acrylic&nbsp;on&nbsp;wood&nbsp;panel · 50&nbsp;×&nbsp;60&nbsp;cm&nbsp;(19.5&nbsp;×&nbsp;23.5&nbsp;in) · 2018</span></figcaption>
     </figure>
     <figure>
-      <img src="/assets/img/artwork/27864cfbb7af4fdd93b8f0ac634fe57e.webp" width="1600" height="1508" alt="High-top sneaker hand-painted with an orange koi fish and waves" loading="lazy">
+      <img src="/assets/img/artwork/c18262f625474c059a28637f5de58466.webp" width="1119" height="1600" sizes="(max-width: 700px) 100vw, 400px" alt="Painting of a giant eye above a curling ocean wave under a starry sky" loading="lazy">
+      <figcaption><a class="art-title" href="/blog/starry-eyed-space-and-time/">Starry-Eyed Space and Time</a><span class="art-meta">Acrylic&nbsp;on&nbsp;wood&nbsp;panel · 50&nbsp;×&nbsp;70&nbsp;cm&nbsp;(19.5&nbsp;×&nbsp;27.5&nbsp;in) · 2018</span></figcaption>
     </figure>
     <figure>
-      <img src="/assets/img/artwork/e49a04c0ca064634846d5dd4882f829a.webp" width="1322" height="1600" alt="Painting of two jellyfish, one blue and one orange, drifting through a sky that fades into space" loading="lazy">
-      <figcaption><a href="/blog/space-jellyfish/">Space Jellyfish</a></figcaption>
+      <img src="/assets/img/artwork/8a2146bc605542a78abdc3d3873f3984.webp" width="1326" height="1600" sizes="(max-width: 700px) 100vw, 400px" alt="Painting of a bare tree and a windmill silhouetted against a red and yellow sunset" loading="lazy">
+      <figcaption><a class="art-title" href="/blog/firefly-windmill/">Firefly Windmill</a><span class="art-meta">Acrylic&nbsp;on&nbsp;wood&nbsp;panel · 50&nbsp;×&nbsp;60&nbsp;cm&nbsp;(19.5&nbsp;×&nbsp;23.5&nbsp;in) · 2018</span></figcaption>
     </figure>
     <figure>
-      <img src="/assets/img/artwork/a509e5e8da9845b3a99189a3d1101146.webp" width="1335" height="960" alt="Three narrow paintings side by side: a pyramid, a cherry tree by a stream, and a glowing green planet" loading="lazy">
+      <img src="/assets/img/blog/clouded-luminescence/0bcc525f736145298ea07c3d75271687.webp" width="1341" height="1600" sizes="(max-width: 700px) 100vw, 400px" alt="Painting of glowing orange clouds against a deep blue sky" loading="lazy">
+      <figcaption><a class="art-title" href="/blog/clouded-luminescence/">Clouded Luminescence</a><span class="art-meta">Acrylic&nbsp;on&nbsp;wood&nbsp;panel · 50&nbsp;×&nbsp;60&nbsp;cm&nbsp;(19.5&nbsp;×&nbsp;23.5&nbsp;in) · 2020</span></figcaption>
     </figure>
     <figure>
-      <img src="/assets/img/artwork/f96d4d5c0a00461e95a1ee33bcffd091.webp" width="1600" height="1165" alt="High-top sneakers hand-painted with red and black Pacific Northwest style designs" loading="lazy">
-      <figcaption><a href="/blog/tattooed-shoes-pacific-northwest/">Tattooed Shoes: Pacific Northwest</a></figcaption>
+      <img src="/assets/img/blog/two-toned-transition/98549cabdc3649e89cc4f51552a9a5fa.webp" width="1519" height="1600" sizes="(max-width: 700px) 100vw, 400px" alt="Two tall paintings side by side: a bare red tree with mushrooms, and a green cactus under a blue sky" loading="lazy">
+      <figcaption><a class="art-title" href="/blog/two-toned-transition/">Two-toned Transition</a><span class="art-meta">Acrylic&nbsp;on&nbsp;two&nbsp;wood&nbsp;panels · 160&nbsp;×&nbsp;58&nbsp;cm&nbsp;each&nbsp;(5.25&nbsp;×&nbsp;2&nbsp;ft) · 2020</span></figcaption>
     </figure>
     <figure>
-      <img src="/assets/img/artwork/7a4ab231deef428abba9d1ba4a26f4c2.webp" width="1600" height="1600" alt="Holding a painting of a smiling tiki statue in front of mountains and a sunset" loading="lazy">
+      <img src="/assets/img/blog/backwoods-forefront/a8cb0ce9de4a4fae963dcb9a1b1650d1.webp" width="1600" height="1269" sizes="(max-width: 700px) 100vw, 400px" alt="Painting of tall tree trunks and red mushrooms in front of a glowing green light" loading="lazy">
+      <figcaption><a class="art-title" href="/blog/backwoods-forefront/">Backwoods Forefront</a><span class="art-meta">Acrylic&nbsp;on&nbsp;wood&nbsp;panel · 40&nbsp;×&nbsp;50&nbsp;cm&nbsp;(15.75&nbsp;×&nbsp;19.5&nbsp;in) · 2020</span></figcaption>
     </figure>
     <figure>
-      <img src="/assets/img/artwork/f1feab41f040420c9ab0f5d40903388d.webp" width="1600" height="900" alt="Animal skull painted pale blue with silver patterns, resting on moss" loading="lazy">
+      <img src="/assets/img/blog/sunshine-daydream/59870179c3e3496fa83aba135363fbf8.webp" width="1599" height="1276" sizes="(max-width: 700px) 100vw, 400px" alt="Painting of a bright sun and swirling pink clouds over a grassy field" loading="lazy">
+      <figcaption><a class="art-title" href="/blog/sunshine-daydream/">Sunshine Daydream</a><span class="art-meta">Acrylic&nbsp;on&nbsp;wood&nbsp;panel · 40&nbsp;×&nbsp;50&nbsp;cm&nbsp;(15.75&nbsp;×&nbsp;19.5&nbsp;in) · 2018</span></figcaption>
     </figure>
     <figure>
-      <img src="/assets/img/artwork/c18262f625474c059a28637f5de58466.webp" width="1119" height="1600" alt="Painting of a giant eye above a curling ocean wave under a starry sky" loading="lazy">
-      <figcaption><a href="/blog/starry-eyed-space-and-time/">Starry-Eyed Space and Time</a></figcaption>
+      <!-- Title, size and year needed from Martell -->
+      <img src="/assets/img/artwork/82561f32ca534273ba9110c2f89d5db0.webp" width="1600" height="1600" sizes="(max-width: 700px) 100vw, 400px" alt="Painting of a green jellyfish floating in a starry night sky beside the moon" loading="lazy">
+      <figcaption><span class="art-meta">Acrylic&nbsp;painting</span></figcaption>
     </figure>
     <figure>
-      <img src="/assets/img/artwork/f1df2d86460a4e2fbc2f15b543f0adc9.webp" width="1430" height="1600" alt="Slip-on shoes hand-painted with Russian nesting dolls" loading="lazy">
+      <!-- Title, size and year needed from Martell -->
+      <img src="/assets/img/artwork/a509e5e8da9845b3a99189a3d1101146.webp" width="1335" height="960" sizes="(max-width: 700px) 100vw, 400px" alt="Three narrow paintings side by side: a pyramid, a cherry tree by a stream, and a glowing green planet" loading="lazy">
+      <figcaption><span class="art-meta">Acrylic&nbsp;paintings,&nbsp;set&nbsp;of&nbsp;three</span></figcaption>
     </figure>
     <figure>
-      <img src="/assets/img/artwork/1a9801c76e6e4b6fa5f8cb06b9fdb46e.webp" width="1600" height="1129" alt="Three animal skulls painted dark blue, red and light blue, lying on grass" loading="lazy">
+      <!-- Title, size and year needed from Martell -->
+      <img src="/assets/img/artwork/7a4ab231deef428abba9d1ba4a26f4c2.webp" width="1600" height="1600" sizes="(max-width: 700px) 100vw, 400px" alt="Holding a painting of a smiling tiki statue in front of mountains and a sunset" loading="lazy">
+      <figcaption><span class="art-meta">Acrylic&nbsp;painting</span></figcaption>
     </figure>
     <figure>
-      <img src="/assets/img/artwork/8a2146bc605542a78abdc3d3873f3984.webp" width="1326" height="1600" alt="Painting of a bare tree and a windmill silhouetted against a red and yellow sunset" loading="lazy">
-      <figcaption><a href="/blog/firefly-windmill/">Firefly Windmill</a></figcaption>
+      <img src="/assets/img/artwork/eb4831538f99472eb50fb2522ff92a97.webp" width="960" height="869" sizes="(max-width: 700px) 100vw, 400px" alt="Paintings displayed at an outdoor market stall in Estonia" loading="lazy">
+      <figcaption><a class="art-title" href="/blog/the-estonian-collection/">The Estonian Collection</a><span class="art-meta">On&nbsp;show&nbsp;at&nbsp;a&nbsp;market&nbsp;stall&nbsp;in&nbsp;Estonia</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="art-group" id="shoes" data-category="shoes">
+  <h2>Shoes</h2>
+  <p class="lede">Every pair painted by hand, one for each spring.</p>
+  <div class="art-grid">
+    <figure>
+      <img src="/assets/img/artwork/f96d4d5c0a00461e95a1ee33bcffd091.webp" width="1600" height="1165" sizes="(max-width: 700px) 100vw, 400px" alt="High-top sneakers hand-painted with red and black Pacific Northwest style designs" loading="lazy">
+      <figcaption><a class="art-title" href="/blog/tattooed-shoes-pacific-northwest/">Pacific Northwest</a><span class="art-meta">Acrylic&nbsp;and&nbsp;fabric&nbsp;marker&nbsp;on&nbsp;high-tops · 2017</span></figcaption>
     </figure>
     <figure>
-      <img src="/assets/img/artwork/82561f32ca534273ba9110c2f89d5db0.webp" width="1600" height="1600" alt="Painting of a green jellyfish floating in a starry night sky beside the moon" loading="lazy">
+      <img src="/assets/img/artwork/15348fce776749e99312bb7487a78d4d.webp" width="982" height="828" sizes="(max-width: 700px) 100vw, 400px" alt="Hand-painted grey high-top sneakers with a skull and potion design" loading="lazy">
+      <figcaption><a class="art-title" href="/blog/tattooed-shoes-flytraps/">FlyTraps</a><span class="art-meta">Acrylic&nbsp;and&nbsp;fabric&nbsp;marker&nbsp;on&nbsp;high-tops · 2018</span></figcaption>
     </figure>
     <figure>
-      <img src="/assets/img/artwork/2e8dbab742f54e889395c495c92c0fc7.webp" width="1600" height="1255" alt="Sneakers hand-painted with a retro rocket and geometric patterns" loading="lazy">
-      <figcaption><a href="/blog/tattooed-shoes-vintage-sci-fi/">Tattooed Shoes: Vintage Sci-Fi</a></figcaption>
+      <img src="/assets/img/artwork/2e8dbab742f54e889395c495c92c0fc7.webp" width="1600" height="1255" sizes="(max-width: 700px) 100vw, 400px" alt="Sneakers hand-painted with a retro rocket and geometric patterns" loading="lazy">
+      <figcaption><a class="art-title" href="/blog/tattooed-shoes-vintage-sci-fi/">Vintage Sci-Fi</a><span class="art-meta">Acrylic&nbsp;and&nbsp;fabric&nbsp;marker&nbsp;on&nbsp;high-tops · 2020</span></figcaption>
+    </figure>
+    <figure>
+      <!-- Title and year needed from Martell -->
+      <img src="/assets/img/artwork/27864cfbb7af4fdd93b8f0ac634fe57e.webp" width="1600" height="1508" sizes="(max-width: 700px) 100vw, 400px" alt="High-top sneaker hand-painted with an orange koi fish and waves" loading="lazy">
+      <figcaption><span class="art-meta">Hand-painted&nbsp;high-tops</span></figcaption>
+    </figure>
+    <figure>
+      <!-- Title and year needed from Martell -->
+      <img src="/assets/img/artwork/f1df2d86460a4e2fbc2f15b543f0adc9.webp" width="1430" height="1600" sizes="(max-width: 700px) 100vw, 400px" alt="Slip-on shoes hand-painted with Russian nesting dolls" loading="lazy">
+      <figcaption><span class="art-meta">Hand-painted&nbsp;slip-ons</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="art-group" id="murals-objects" data-category="murals-objects">
+  <h2>Murals and objects</h2>
+  <p class="lede">Ceilings, skulls, and anything else that will hold paint.</p>
+  <div class="art-grid">
+    <figure>
+      <img src="/assets/img/blog/ceiling-mural-a-piece-of-estonia/034c17a16d6b47f48c011fd385c387d3.webp" width="1600" height="900" sizes="(max-width: 700px) 100vw, 400px" alt="Ceiling mural painted in an apartment in Tallinn" loading="lazy">
+      <figcaption><a class="art-title" href="/blog/ceiling-mural-a-piece-of-estonia/">Ceiling Mural, a Piece of Estonia</a><span class="art-meta">Mural · 2.75&nbsp;×&nbsp;3.3&nbsp;m&nbsp;(9&nbsp;×&nbsp;11&nbsp;ft) · Tallinn · 2019</span></figcaption>
+    </figure>
+    <figure>
+      <!-- Title and year needed from Martell -->
+      <img src="/assets/img/artwork/1a9801c76e6e4b6fa5f8cb06b9fdb46e.webp" width="1600" height="1129" sizes="(max-width: 700px) 100vw, 400px" alt="Three animal skulls painted dark blue, red and light blue, lying on grass" loading="lazy">
+      <figcaption><span class="art-meta">Painted&nbsp;animal&nbsp;skulls</span></figcaption>
+    </figure>
+    <figure>
+      <!-- Title and year needed from Martell -->
+      <img src="/assets/img/artwork/f1feab41f040420c9ab0f5d40903388d.webp" width="1600" height="900" sizes="(max-width: 700px) 100vw, 400px" alt="Animal skull painted pale blue with silver patterns, resting on moss" loading="lazy">
+      <figcaption><span class="art-meta">Painted&nbsp;animal&nbsp;skull</span></figcaption>
     </figure>
   </div>
 </section>

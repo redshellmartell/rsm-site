@@ -13,6 +13,10 @@ Output goes to `dist/`. No dependencies.
 - `src/pages/` has one file per page. `src/blog/` has one file per blog post.
 - `assets/` is copied as-is (CSS, JS, images).
 
+After adding images, run `python3 scripts/make-sizes.py` (needs Pillow). It writes
+400px and 800px copies next to each image, and the build adds them as `srcset`
+so phones download smaller files.
+
 ## Hosting (Cloudflare Pages)
 
 - Build command: `node build.mjs`
