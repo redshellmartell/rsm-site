@@ -1,4 +1,4 @@
-// Menu button, tap-to-enlarge galleries, contact form.
+// Menu button, tap-to-enlarge galleries, filter buttons, contact form.
 
 document.addEventListener("DOMContentLoaded", () => {
   // Phone menu
@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Lightbox: every image inside a .gallery or .masonry group, or marked data-zoom
-  const groups = document.querySelectorAll(".gallery, .masonry, .prose");
+  // Lightbox: every image inside a .gallery or .art-grid group, or marked data-zoom
+  const groups = document.querySelectorAll(".gallery, .art-grid, .prose");
   if (groups.length) {
     const dialog = document.createElement("dialog");
     dialog.className = "lightbox";
@@ -33,10 +33,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const show = (i) => {
       index = (i + set.length) % set.length;
       const img = set[index];
-      big.src = img.dataset.full || img.currentSrc || img.src;
+      big.src = img.src; // the full-size file, not the smaller srcset pick
       big.alt = img.alt;
       const fig = img.closest("figure");
-      caption.textContent = fig?.querySelector("figcaption")?.textContent || "";
+      const parts = fig?.querySelector("figcaption")?.children;
+      caption.textContent = parts?.length
+        ? [...parts].map((el) => el.textContent.trim()).filter(Boolean).join(" · ")
+        : fig?.querySelector("figcaption")?.textContent || "";
       const multi = set.length > 1;
       dialog.querySelector(".lightbox-prev").hidden = !multi;
       dialog.querySelector(".lightbox-next").hidden = !multi;
@@ -62,6 +65,19 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.key === "ArrowRight") show(index + 1);
     });
   }
+
+  // Filter buttons: show only the [data-category] items that match
+  document.querySelectorAll(".filters").forEach((bar) => {
+    const items = document.querySelectorAll("[data-category]");
+    bar.hidden = false;
+    bar.addEventListener("click", (e) => {
+      const button = e.target.closest("button[data-filter]");
+      if (!button) return;
+      const f = button.dataset.filter;
+      bar.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
+      items.forEach((el) => { el.hidden = f !== "all" && el.dataset.category !== f; });
+    });
+  });
 
   // Contact form (Web3Forms)
   const form = document.querySelector("form.form");

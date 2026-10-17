@@ -3,6 +3,7 @@
   "tagline": "Art, Design, Production. A fresh take on paintings, playing cards, and custom shoes!",
   "url": "https://www.redshellmartell.com",
   "email": "contact@redshellmartell.com",
+  "image": "/assets/img/artwork/e49a04c0ca064634846d5dd4882f829a.webp",
   "formKey": "YOUR_WEB3FORMS_ACCESS_KEY",
   "nav": [
     {
@@ -32,6 +33,10 @@
     }
   ],
   "social": [
+    {
+      "label": "Etsy",
+      "href": "https://www.etsy.com/shop/RedShellMartell"
+    },
     {
       "label": "Instagram",
       "href": "https://www.instagram.com/redshellmartell"
