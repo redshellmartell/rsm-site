@@ -1,0 +1,40 @@
+<!--- { "title": "About", "description": "About Red-Shell Martell, and how to get in touch." } --->
+<header class="page-intro">
+  <h1>About</h1>
+</header>
+
+<section class="section">
+  <div class="about wide">
+    <img src="/assets/img/about/51473c56637b4a9bbde98e7a68ec403c.webp" width="1192" height="1600" alt="Matthew Austin sitting outdoors, holding a deck with a playing card between the teeth">
+    <div>
+      <h2>Matthew Austin</h2>
+      <p class="eyebrow">Artist and designer</p>
+      <p>I am an American artist currently living and working in Estonia. Since a young age, I have always been interested in art. I will paint on anything I can find, but my main interest is designing and painting on shoes. It is the intersection between fashion and art. Some people like to wear them and some people put them on the shelf, but everyone lights up when they get their own pair of custom shoes!</p>
+      <p>In recent years I have been designing games. My favorite genre is card games, like the ones I have been playing for years! I find it fascinating to bring a project to life, from concept and prototyping to print and production.</p>
+      <p>When I am not making art, you can find me at my day job, managing a multi-disciplinary international team in the field of circular economy and sustainability.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <p>Would you like to request an art commission? Or have a question? Contact me, I am looking forward to it!</p>
+  <p>Tallinn, Estonia and Baltimore, Maryland, USA · <a href="mailto:{{email}}">{{email}}</a></p>
+  <form class="form" action="https://api.web3forms.com/submit" method="POST" data-email="{{email}}">
+    <input type="hidden" name="access_key" value="{{formKey}}">
+    <input type="hidden" name="subject" value="New message from redshellmartell.com">
+    <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off">
+    <label>Name <input type="text" name="name" required autocomplete="name"></label>
+    <label>Email <input type="email" name="email" required autocomplete="email"></label>
+    <label>Message <textarea name="message" required></textarea></label>
+    <div><button class="button" type="submit">Send</button></div>
+    <p class="form-status" role="status"></p>
+  </form>
+</section>
+
+<section class="section" id="newsletter">
+  <h2>Newsletter history</h2>
+  <div class="newsletter">
+    <p>No newsletters have been sent yet.</p>
+  </div>
+</section>
