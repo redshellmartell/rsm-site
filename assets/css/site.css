@@ -456,3 +456,4 @@ a.art-title:hover { color: var(--red); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+.game-sub { margin: var(--s4) 0 var(--s2); }
