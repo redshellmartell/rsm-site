@@ -458,3 +458,5 @@ a.art-title:hover { color: var(--red); }
 }
 .game-sub { margin: var(--s4) 0 var(--s2); }
 .logo-hero h2.logo-round img { width: min(340px, 60%); }
+.logo-hero h2.logo-title img { width: min(440px, 70%); }
+.logo-hero-dim { filter: brightness(0.2) saturate(1.2) blur(3px); }
