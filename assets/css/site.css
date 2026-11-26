@@ -457,3 +457,4 @@ a.art-title:hover { color: var(--red); }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 .game-sub { margin: var(--s4) 0 var(--s2); }
+.logo-hero h2.logo-round img { width: min(340px, 60%); }
