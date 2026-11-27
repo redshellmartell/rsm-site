@@ -456,3 +456,14 @@ a.art-title:hover { color: var(--red); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+.gallery-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 760px) { .gallery-3 { grid-template-columns: repeat(2, 1fr); } }
+.game { padding-block: var(--s3); }
+.game + .game { margin-top: var(--s3); }
+.game .logo-hero { margin-bottom: var(--s3); }
+.game > p { margin-block: 0 var(--s2); }
+.game .gallery { margin-block: var(--s3) 0; }
+.page-intro + .game { padding-top: 0; }
+.logo-hero h2.logo-round img { width: min(340px, 60%); }
+.logo-hero h2.logo-title img { width: min(440px, 70%); }
+.logo-hero-dim { filter: brightness(0.2) saturate(1.2) blur(3px); }
