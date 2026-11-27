@@ -467,3 +467,7 @@ a.art-title:hover { color: var(--red); }
 .logo-hero h2.logo-round img { width: min(340px, 60%); }
 .logo-hero h2.logo-title img { width: min(440px, 70%); }
 .logo-hero-dim { filter: brightness(0.2) saturate(1.2) blur(3px); }
+.doors-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 960px) { .doors-3 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 760px) { .doors-3 { grid-template-columns: 1fr; } }
+.doors-3 .door-text h3 { font-size: clamp(1.75rem, 3.2vw, 2.75rem); }
